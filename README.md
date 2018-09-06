@@ -1,37 +1,47 @@
-## Welcome to GitHub Pages
+# About Computer Languages
 
-You can use the [editor on GitHub](https://github.com/webcraftie/demo/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+A **computer language** is a method of communication with a computer. Types of computer languages include:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Most commonly discussed languagesare probably _Markdown_ and _Programming Languages_. However, the list is a bit longer than that. Some people may argue that some of these should be lumped together, others may argue some I've kumped together should be their own category.
 
-### Markdown
+Types of Computer Languages:
+- ADL
+- DQL
+- HDL
+- Knowledge Representation
+- Markup
+- Modeling
+- Programming
+- Specification
+- Style
+- Transformation
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+
+## Markup
+
+Markup languages are those designed to format content. Most notable example is probably html.
 
 ```markdown
-Syntax highlighted code block
+### Example:
 
-# Header 1
-## Header 2
-### Header 3
+<html>
+  <head>
+    <title>
+      Hello World HTML Page!
+    </title>
+  </head>
+  <body>
+    Hello World!!
+  </body>
+</html>
+```
+
+
+## Programming Languages
 
 - Bulleted
 - List
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/webcraftie/demo/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
