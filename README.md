@@ -1,8 +1,8 @@
 # About Computer Languages
 
-A **computer language** is a method of communication with a computer. Types of computer languages include:
+A **computer language** is a method of communication with a computer.
 
-Most commonly discussed languagesare probably _Markdown_ and _Programming Languages_. However, the list is a bit longer than that. Some people may argue that some of these should be lumped together, others may argue some I've kumped together should be their own category.
+Most commonly discussed categories of computer languages are probably _Markdown_ and _Programming Languages_. However, the list is a bit longer than that. Some people may argue that some of these should be lumped together, others may argue some I've kumped together should be their own category.
 
 Types of Computer Languages:
 - ADL
