@@ -19,10 +19,10 @@ Types of Computer Languages:
 
 ## Markup
 
-Markup languages are those designed to format content. Most notable example is probably html.
+Markup languages are those designed to format content. Most notable example is probably _html_.
 
 ```markdown
-### Example:
+**Example in HTML:**
 
 <html>
   <head>
@@ -39,8 +39,14 @@ Markup languages are those designed to format content. Most notable example is p
 
 ## Programming Languages
 
-- Bulleted
-- List
+There are a variety of programming languages, and we're going to go over a few. Some languages are high level, some low level; some compiled, some interpretted.
+
+```markdown
+**Example in Ruby:**
+
+PATH = 'hello_world.txt'
+File.open(PATH, 'w') { |file| file.puts "Hello world!" }
+```
 
 
 
