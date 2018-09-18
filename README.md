@@ -1,6 +1,6 @@
 ## SVG & Javascript
 
-Examples and demos expanded from instructional videos provided on my YouTube channel.
+Examples and expanded demos from instructional videos provided on my YouTube channel.
 
 ### Demos:
 
@@ -8,5 +8,5 @@ Examples and demos expanded from instructional videos provided on my YouTube cha
 
 ...
 - [Test:](https://webcraftie.github.io/SVG-JS-Demos/test.html) Does Javascript work with GitHub Pages (it does)
-- []
+- [Multi-lingual Hello World:](https://webcraftie.github.io/SVG-JS-Demos/hello-world.html) In Human languages, not computer
 - [RGB Picker:](https://webcraftie.github.io/SVG-JS-Demos/RGB-Picker.html) Click squares to change multiple attributes
