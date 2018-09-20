@@ -16,7 +16,10 @@
   <rect id="svg_1" height="338" width="521" y="30.4375" x="31" stroke-width="18" stroke="#777" fill="#555"/>
     <rect id="svg_1" height="338" width="521" y="30.4375" x="31" stroke-width="15" stroke="#ddd" fill="#555"/>
   <a href="#"><g id="sq-colors">
-   <rect id="sq-red" onclick="callColor('RED', 'sq-red', '#ff0000')" height="63" width="63" y="68.4375" x="73" stroke-width="3" stroke="#3f3f3f" fill="#ff0000" rx="15" ry="15"/>
+   <rect id="sq-red" onclick="callColor('RED', 'sq-red', '#ff0000')" height="63" width="63" y="68.4375" x="73" stroke-width="3" stroke="#3f3f3f" fill="#ff0000" rx="15" ry="15" onmouseover="document.getElementById('sq-red').setAttribute('fill', '#f66'); document.getElementById('sq-red').setAttribute('stroke', '#49e');
+    document.getElementById('sq-red').setAttribute('stroke-width', '5');" 
+    onmouseout="document.getElementById('sq-red').setAttribute('fill', '#f00'); document.getElementById('sq-red').setAttribute('stroke', '#3f3f3f');
+    document.getElementById('sq-red').setAttribute('stroke-width', '3');"/>
    <rect id="sq-green" onclick="callColor('GREEN', 'sq-green', '#00ff00')" height="63" width="63" y="166.5159" x="73" stroke-width="3" stroke="#3f3f3f" fill="#00ff00" rx="15" ry="15"/>
    <rect id="sq-blue" onclick="callColor('BLUE', 'sq-blue', '#0000ff')" height="63" width="63" y="264.563759" x="73" stroke-width="3" stroke="#3f3f3f" fill="#0000ff" rx="15" ry="15"/>
  </g></a>
