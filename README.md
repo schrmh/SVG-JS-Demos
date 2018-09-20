@@ -10,3 +10,4 @@ Examples and expanded demos from instructional videos provided on my YouTube cha
 - [Test:](https://webcraftie.github.io/SVG-JS-Demos/test.html) Does Javascript work with GitHub Pages?
 - [Multi-lingual Hello World:](https://webcraftie.github.io/SVG-JS-Demos/hello-world.html) In Human languages, not computer
 - [RGB Picker:](https://webcraftie.github.io/SVG-JS-Demos/RGB-Picker.html) Click squares to change multiple attributes
+- [CS Timeline:](https://webcraftie.github.io/SVG-JS-Demos/timeline.html) Timeline with arrows that you can mouse over. Embedded PNG not by me.
