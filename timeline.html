@@ -1,0 +1,58 @@
+<html><head></head><body>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="0 0 640 640" width="640" height="640">
+    
+<defs><path d="M0 -1L640 -1L640 238.55L0 238.55L0 -1Z" id="c1T90nNYQ5"></path><path d="M0 238.55L640 238.55L640 298.5L0 298.5L0 238.55Z" id="bKIsLKGZ"></path><path d="M0 579L640 579L640 642L0 642L0 579Z" id="c3ap3VXg6u"></path><path d="M0 577.5L640 577.5L640 582L0 582L0 577.5Z" id="bNtC6TZhq"></path><path d="M0 298.5L640 298.5L640 303L0 303L0 298.5Z" id="bSZmDwt9X"></path><path d="M275.45 588.5L364.55 588.5L320 633.05L275.45 588.5Z" id="f7C1w26PmA"></path><path d="M275.45 290.5L364.55 290.5L320 245.95L275.45 290.5Z" id="c2ZfLFDHbT"></path><text id="ca68seixE" x="76.5" y="49.5" font-size="90" font-family="Open Sans" font-weight="normal" font-style="normal" letter-spacing="0" alignment-baseline="before-edge" transform="matrix(1 0 0 1 59 -54)" style="line-height:100%" xml:space="preserve" dominant-baseline="text-before-edge"><tspan x="76.5" dy="0.1em" alignment-baseline="before-edge" dominant-baseline="text-before-edge" text-anchor="start">CompSci</tspan><tspan x="76.5" dy="1.2em" alignment-baseline="before-edge" dominant-baseline="text-before-edge" text-anchor="start">Timeline</tspan></text></defs>
+       <image id="timeline" xlink:href="timeline.png" x="0" y="0" width="550.68" height="682.61" transform="matrix(1.1712048832271762 0 0 1.1712048832271762 -2.1044939715016966 220.52536231884056)"></image> 
+    <g><g><g><use xlink:href="#c1T90nNYQ5" opacity="1" fill="#6e7181" fill-opacity="1"></use></g><g><use xlink:href="#bKIsLKGZ" opacity="1" fill="#f6f1ee" fill-opacity="1"></use></g><g><use xlink:href="#c3ap3VXg6u" opacity="1" fill="#f6f1ee" fill-opacity="1"></use></g><g><use xlink:href="#bNtC6TZhq" opacity="1" fill="#6e7181" fill-opacity="1"></use></g><g><use xlink:href="#bSZmDwt9X" opacity="1" fill="#6e7181" fill-opacity="1"></use></g><g><use xlink:href="#f7C1w26PmA" opacity="1" fill="#6e7181" onmouseover="startDown();"
+onmouseout="stop();" fill-opacity="1"></use></g><g><use xlink:href="#c2ZfLFDHbT" opacity="1" fill="#6e7181" fill-opacity="1" onmouseover="startUp();"
+onmouseout="stop();"></use></g><g id="a1hgwrtsIv"><use xlink:href="#ca68seixE" opacity="1" fill="#ffffff" fill-opacity="1"></use><g><use xlink:href="#ca68seixE" opacity="1" fill-opacity="0" stroke="#3d096d" stroke-width="0" stroke-opacity="1"></use></g></g></g></g>
+    
+
+    
+    
+    </svg>
+    
+    <script>
+    var timerFunction = null;
+
+    function startUp() {
+        if(timerFunction == null) {
+            timerFunction = setInterval(animateUp, 20);
+        }
+    }
+        
+            function startDown() {
+        if(timerFunction == null) {
+            timerFunction = setInterval(animateDown, 20);
+        }
+    }
+
+    function stop() {
+        if(timerFunction != null){
+            clearInterval(timerFunction);
+            timerFunction = null;
+        }
+    }
+
+    function animateUp() {
+        var circle = document.getElementById("timeline");
+        var x = circle.getAttribute("y");
+        var newX = -2 + parseInt(x);
+        if(newX < -377) {
+            newX = -377;
+        }
+                console.log(newX)
+        circle.setAttribute("y", newX);
+    }
+         
+            function animateDown() {
+        var circle = document.getElementById("timeline");
+        var x = circle.getAttribute("y");
+        var newX = 2 + parseInt(x);
+        if(newX > 0) {
+            newX = 0;
+        }
+        circle.setAttribute("y", newX);
+    }
+</script>
+    </body></html>
