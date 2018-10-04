@@ -11,3 +11,4 @@ Examples and expanded demos from instructional videos provided on my YouTube cha
 - [Multi-lingual Hello World:](https://webcraftie.github.io/SVG-JS-Demos/hello-world.html) In Human languages, not computer
 - [RGB Picker:](https://webcraftie.github.io/SVG-JS-Demos/RGB-Picker.html) Click squares to change multiple attributes
 - [CS Timeline:](https://webcraftie.github.io/SVG-JS-Demos/timeline.html) Timeline with arrows that you can mouse over. Embedded PNG not by me.
+- [Space Cat!:](https://webcraftie.github.io/SVG-JS-Demos/moar-demos/space-cat.html) Behold Space Cat's Power! graphics not by me
