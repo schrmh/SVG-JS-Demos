@@ -6,6 +6,7 @@
     </audio>
 
 <?xml version="1.0"?>
+<table cellspacing="10"><tr><td>
 <svg width="580" height="400" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
  <g>
@@ -29,20 +30,54 @@
 
   
  </g>
-</svg><br>
+</svg>
+    </td>
+    <td>
+        <div style="width:200">
+        <h3><span id="more-words">&nbsp;</span></h3><br>
+        <span id="more-words2">&nbsp;</span>
+        </div>
+    </td>
+    </tr></table><br><span id="count-here">&nbsp;</span>
     <h3><span id="texthere">Height of Destruction!</span></h3> 
     Enter y coordinate below!<br><input type="text" id="tacosY" value="choose between 0-100"><br>
 <button type="submit" onclick="kaBloom()" id="buttonSubmit" style="border-radius: 10px; border: 5; background: black; font-size: 14px; line-height: 24px; color: white;"> --DESTROY!!!1--</button>
 
 <script>
 var audio = document.getElementsByTagName("audio")[0];
-
+var shotcount = 0;
+var teacount1 = 0;
+var teacount2 = 0;
+var teacount3 = 0;
+var teacount4 = 0;
+    
 function kaBloom(){
+  shotcount += 1;
+  document.getElementById('count-here').innerHTML="&nbsp; &nbsp; shots fired: " + shotcount;
+  teacount1 -= 1;
+  teacount2 -= 1;
+  teacount3 -= 1;
+  teacount4 -= 1;
+  if (teacount1 < 1) {
   document.getElementById('pot1').setAttribute('xlink:href', "imgs/teapot-nosteam.png");
+  } else if (teacount1 < 3) {
+    document.getElementById('pot1').setAttribute('xlink:href', "imgs/teapot-steam.png");
+  }
+  if (teacount2 < 1) {
   document.getElementById('pot2').setAttribute('xlink:href', "imgs/teapot-nosteam.png");
+  } else if (teacount2 < 3) {
+    document.getElementById('pot2').setAttribute('xlink:href', "imgs/teapot-steam.png");
+  }
+  if (teacount3 < 1) {
   document.getElementById('pot3').setAttribute('xlink:href', "imgs/teapot-nosteam.png");
+  } else if (teacount3 < 3) {
+    document.getElementById('pot3').setAttribute('xlink:href', "imgs/teapot-steam.png");
+  }
+  if (teacount4 < 1) {
   document.getElementById('pot4').setAttribute('xlink:href', "imgs/teapot-nosteam.png");
-
+  } else if (teacount4 < 3) {
+    document.getElementById('pot4').setAttribute('xlink:href', "imgs/teapot-steam.png");
+  }
   var cordies = document.getElementById('tacosY').value;  
   var lazerY = 4 * cordies;
   document.getElementById('lazer').setAttribute('x1', 90);
@@ -54,32 +89,44 @@ function kaBloom(){
   audio.play();
     
   if (cordies < 12) {
-    document.getElementById('texthere').innerHTML="Too high!";
+    document.getElementById('more-words').innerHTML="Too high!";
+    document.getElementById('more-words2').innerHTML="Aim lower. You probably need to be at least twice lower than that!";
   } else if (cordies < 23) {
-    document.getElementById('pot1').setAttribute('xlink:href', "imgs/teapot-steam.png");
+    document.getElementById('pot1').setAttribute('xlink:href', "imgs/teapot-steam-hot.png");
     document.getElementById('buttonSubmit').innerHTML="~ ~ make tea ~ ~";
-    document.getElementById('texthere').innerHTML="Tea for me~";
+    document.getElementById('texthere').innerHTML="Time for tea~";
+    teacount1 = 4;
   
   } else if (cordies < 35) {
-    document.getElementById('texthere').innerHTML="Where are you aiming?";
+    document.getElementById('more-words').innerHTML="Where are you aiming?";
+    document.getElementById('more-words2').innerHTML="Never fired a galactic lazer-eye cat before?";
   } else if (cordies < 47) {
-    document.getElementById('pot2').setAttribute('xlink:href', "imgs/teapot-steam.png");
+    document.getElementById('pot2').setAttribute('xlink:href', "imgs/teapot-steam-hot.png");
     document.getElementById('buttonSubmit').innerHTML="~ ~ make tea ~ ~";
-    document.getElementById('texthere').innerHTML="Tea for me~";
+    document.getElementById('texthere').innerHTML="Time for tea~";
+    teacount2 = 4;
+      
   } else if (cordies < 63) {
-    document.getElementById('texthere').innerHTML="Where are you aiming?";
+    document.getElementById('more-words').innerHTML="Where are you aiming?";
+    document.getElementById('more-words2').innerHTML="Careful! You could burn an eye out with that thing!";
   } else if (cordies < 72) {
-    document.getElementById('pot3').setAttribute('xlink:href', "imgs/teapot-steam.png");
+    document.getElementById('pot3').setAttribute('xlink:href', "imgs/teapot-steam-hot.png");
     document.getElementById('buttonSubmit').innerHTML="~ ~ make tea ~ ~";
-    document.getElementById('texthere').innerHTML="Tea for you~";
+    document.getElementById('texthere').innerHTML="Time for tea~";
+    teacount3 = 4;
+      
   } else if (cordies < 86) {
-    document.getElementById('texthere').innerHTML="Where are you aiming?";
+    document.getElementById('more-words').innerHTML="Where are you aiming?";
+    document.getElementById('more-words2').innerHTML="This your first space-cow wrangle?";
   } else if (cordies < 96) {
-    document.getElementById('pot4').setAttribute('xlink:href', "imgs/teapot-steam.png");
+    document.getElementById('pot4').setAttribute('xlink:href', "imgs/teapot-steam-hot.png");
     document.getElementById('buttonSubmit').innerHTML="~ ~ make tea ~ ~";
-    document.getElementById('texthere').innerHTML="Tea for you~";
+    document.getElementById('texthere').innerHTML="Time for tea~";
+    teacount4 = 4;
+      
   } else {
-    document.getElementById('texthere').innerHTML="Too low!";
+    document.getElementById('more-words').innerHTML="Too low!";
+    document.getElementById('more-words2').innerHTML="Aim higher! There are no teapots at the bottom of space!";
   }
 }
 
