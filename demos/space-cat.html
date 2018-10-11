@@ -9,6 +9,21 @@
 <table cellspacing="10"><tr><td>
 <svg width="580" height="400" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
  <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+    
+        <defs>
+      <!-- Glow Filter by Jack from Stack Overflow -->
+      <filter id="magie-glow" x="-5000%" y="-5000%" width="10000%" height="10000%">
+          <feFlood result="flood" flood-color="#ff00ff" flood-opacity="1"></feFlood>
+          <feComposite in="flood" result="mask" in2="SourceGraphic" operator="in"></feComposite>
+          <feMorphology in="mask" result="dilated" operator="dilate" radius="2"></feMorphology>
+          <feGaussianBlur in="dilated" result="blurred" stdDeviation="5"></feGaussianBlur>
+          <feMerge>
+              <feMergeNode in="blurred"></feMergeNode>
+              <feMergeNode in="SourceGraphic"></feMergeNode>
+          </feMerge>
+      </filter>
+        
+    </defs>
  <g>
   <rect fill="#fff" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
   <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
@@ -20,8 +35,8 @@
   <image transform="matrix(0 0.996968 -0.996968 0 474.949 -24.9399)" xlink:href="imgs/space.jpg" id="svg_1" height="657.635583" width="578.000024" y="-105.917208" x="-39.275578"/>
   <image xlink:href="imgs/cat-face.png" id="cat-face" height="300" width="300" y="-20" x="285"/>  
 
-  <line id="lazer" x1="380" y1="120" x2="380" y2="120" style="stroke:rgb(255,0,255);stroke-width:5" />
-  <line id="lazer2" x1="490" y1="120" x2="490" y2="120" style="stroke:rgb(255,0,255);stroke-width:5" />
+  <line id="lazer" x1="380" y1="120" x2="380" y2="120" style="stroke:rgb(255,0,255); stroke-width:5; filter:url(#magie-glow)" />
+  <line id="lazer2" x1="490" y1="120" x2="490" y2="120" style="stroke:rgb(255,0,255); stroke-width:5; filter:url(#magie-glow)" />
   <image xlink:href="imgs/boom.png" id="booom" height="200" width="200" y="-60" x="820"/>
   <image xlink:href="imgs/teapot-nosteam.png" id="pot1" height="80" width="100" y="10" x="30"/>
   <image xlink:href="imgs/teapot-nosteam.png" id="pot2" height="80" width="100" y="110" x="30"/>
