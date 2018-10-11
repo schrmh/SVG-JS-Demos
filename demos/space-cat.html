@@ -121,8 +121,10 @@ function kaBloom(){
     document.getElementById('pot1').setAttribute('xlink:href', "imgs/teapot-steam-hot.png");
     document.getElementById('buttonSubmit').innerHTML="~ ~ make tea ~ ~";
     document.getElementById('texthere').innerHTML="Time for tea~";
+    if (teacount1 < 0) {
+      teas += 1;
+    }
     teacount1 = 4;
-    teas += 1;
   
   } else if (cordies < 35) {
     document.getElementById('more-words').innerHTML="Where are you aiming?";
@@ -131,8 +133,10 @@ function kaBloom(){
     document.getElementById('pot2').setAttribute('xlink:href', "imgs/teapot-steam-hot.png");
     document.getElementById('buttonSubmit').innerHTML="~ ~ make tea ~ ~";
     document.getElementById('texthere').innerHTML="Time for tea~";
+    if (teacount2 < 0) {
+      teas += 1;
+    }
     teacount2 = 4;
-    teas += 1;
       
   } else if (cordies < 63) {
     document.getElementById('more-words').innerHTML="Where are you aiming?";
@@ -141,8 +145,10 @@ function kaBloom(){
     document.getElementById('pot3').setAttribute('xlink:href', "imgs/teapot-steam-hot.png");
     document.getElementById('buttonSubmit').innerHTML="~ ~ make tea ~ ~";
     document.getElementById('texthere').innerHTML="Time for tea~";
+    if (teacount3 < 0) {
+      teas += 1;
+    }
     teacount3 = 4;
-    teas += 1;
       
   } else if (cordies < 86) {
     document.getElementById('more-words').innerHTML="Where are you aiming?";
@@ -151,8 +157,10 @@ function kaBloom(){
     document.getElementById('pot4').setAttribute('xlink:href', "imgs/teapot-steam-hot.png");
     document.getElementById('buttonSubmit').innerHTML="~ ~ make tea ~ ~";
     document.getElementById('texthere').innerHTML="Time for tea~";
+    if (teacount4 < 0) {
+      teas += 1;
+    }
     teacount4 = 4;
-    teas += 1;
       
   } else {
     document.getElementById('more-words').innerHTML="Too low!";
