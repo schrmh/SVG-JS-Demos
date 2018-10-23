@@ -4,7 +4,7 @@ Examples and expanded demos from instructional videos provided on my YouTube cha
 
 ### Demos:
 
-- [The Multi-language Hello World Compiler/Interpretter](https://webcraftie.github.io/SVG-JS-Demos/demos/compiler.html): Just pretend, only simulated.
+- [The Multi-language Hello World Compiler/Interpreter](https://webcraftie.github.io/SVG-JS-Demos/demos/compiler.html): Just pretend, only simulated.
 - [version 2](https://webcraftie.github.io/SVG-JS-Demos/demos/compiler2.html): now more fancy
 
 ...
