@@ -44,6 +44,8 @@ var polygon = L.polygon([
 ]).addTo(mymap);
  
 var marker = L.marker([40.1093, -88.2275]).addTo(mymap);
+ 
+marker.bindPopup("<b>Illini Union</b><br>Student union in Urbana, Illinois").openPopup();
 
 var popup = L.popup()
     .setLatLng([40.112, -88.227])
