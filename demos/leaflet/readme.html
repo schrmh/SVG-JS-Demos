@@ -12,7 +12,7 @@
 <div id="mapid" style="height: 580px; width: 75%; margin: 35px; border-radius: 13px;"></div>
 
 <script>
-var mymap = L.map('mapid').setView([40.112, -88.227], 16);
+var mymap = L.map('mapid').setView([40.110, -88.227], 16);
 
 L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -44,9 +44,17 @@ var polygon = L.polygon([
 ]).addTo(mymap);
  
 var m_iu = L.marker([40.1093, -88.2275]).addTo(mymap);
- 
 m_iu.bindPopup("<center><b>Illini Union</b><br>Student union in Urbana, Illinois</center>");
 
+var m_hab = L.marker([40.1085, -88.2281]).addTo(mymap);
+m_hab.bindPopup("<center><b>Harvey Administration Building</b></center>");
+ 
+var m_dh = L.marker([40.1069, -88.2261]).addTo(mymap);
+m_dh.bindPopup("<center><b>Davenport Hall</b></center>");
+
+var m_fa = L.marker([40.1060, -88.2273]).addTo(mymap);
+m_fa.bindPopup("<center><b>Foellinger Auditorium</b></center>");
+ 
 var popup = L.popup()
     .setLatLng([40.112, -88.227])
     .setContent("University of Illinois - Urbana Champaign")
