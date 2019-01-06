@@ -54,6 +54,24 @@ var park2 = L.polygon([
 }).addTo(mymap);
 park2.bindPopup("<center><b>Neighborhood Park</b><br>Spawns with a Nesting Species</center>");
 
+var park3 = L.polygon([
+    [29.7752, -95.5994],
+    [29.7764, -95.5988],
+    [29.7768, -95.5987],
+    [29.7772, -95.5987],
+    [29.7772, -95.5972],
+    [29.7771, -95.5969],
+    [29.7763, -95.5956],
+    [29.7761, -95.5951],
+    [29.7761, -95.5947],
+    [29.7750, -95.5947],
+    [29.7749, -95.5985]
+], {color: 'green',
+    fillColor: 'green',
+    fillOpacity: 0.5
+}).addTo(mymap);
+park3.bindPopup("<center><b>Nottingham Park</b><br>Spawns with a Nesting Species</center>");	
+	
 var schoolGrounds = L.polygon([
     [29.7789, -95.5853],
     [29.7813, -95.5855],
