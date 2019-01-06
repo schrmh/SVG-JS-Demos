@@ -14,7 +14,7 @@
 <center><br><br><table><tr><td><div id="map" style="height: 580px; width: 60vw; border-radius: 13px 0px 0px 13px; float:left;"></div><div style="height: 500px; width: 400; border-radius: 13px; float:left;"><img src="graphic.svg"></div></td></tr></table></center>
 
 <script>
-var mymap = L.map('map').setView([29.7635, -95.5891], 16);
+var mymap = L.map('map').setView([29.7635, -95.5881], 16);
 
 var CartoDB_Positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
@@ -23,7 +23,7 @@ var CartoDB_Positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/
 }).addTo(mymap);
 
 
-var polygon = L.polygon([
+var schoolGrounds = L.polygon([
     [29.7789, -95.5853],
     [29.7813, -95.5855],
     [29.7813, -95.5852],
@@ -36,6 +36,24 @@ var polygon = L.polygon([
     [29.7789, -95.5817]
 ], {color: 'grey',
     fillColor: 'grey',
+    fillOpacity: 0.5
+}).addTo(mymap);
+	
+var park1 = L.polygon([
+    [29.7804, -95.5978],
+    [29.7810, -95.5978],
+    [29.7809, -95.5977],
+    [29.7809, -95.5974],
+    [29.7810, -95.5970],
+    [29.7813, -95.5968],
+    [29.7816, -95.5967],
+    [29.7815, -95.5965],
+    [29.7803, -95.5965],
+    [29.7803, -95.5974],
+    [29.7804, -95.5977],
+    [29.7804, -95.5978]
+], {color: 'green',
+    fillColor: 'green',
     fillOpacity: 0.5
 }).addTo(mymap);
 
@@ -108,7 +126,7 @@ var stopf3 = L.circle([29.7855, -95.5925], {
 stopf3.bindPopup("<center><b>Fountain</b><br>Pokestop<br></center>");
  
 var popup = L.popup()
-    .setLatLng([29.785, -95.589])
+    .setLatLng([29.785, -95.588])
     .setContent("<h1>Click map areas<br>& icons for info</h1>")
     .openOn(mymap);
 	
