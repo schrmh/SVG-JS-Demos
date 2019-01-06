@@ -149,6 +149,12 @@ gymFert.bindPopup("<center><b>Fertility Clinic</b><br>Gym<br></center>");
 	
 var gymObie = L.marker([29.7840, -95.5932]).addTo(mymap);
 gymObie.bindPopup("<center><b>The Obelisk</b><br>Gym<br></center>");
+
+var gymPark = L.marker([29.7772, -95.5984]).addTo(mymap);
+gymPark.bindPopup("<center><b>Nottingham Park</b><br>Gym<br></center>");
+
+var gymVote = L.marker([29.7763, -95.5985]).addTo(mymap);
+gymVote.bindPopup("<center><b>Voting Center</b><br>Gym<br></center>");
 	
 var stopTc = L.circle([29.7838, -95.5844], {
     color: '#4863A0',
@@ -173,6 +179,14 @@ var stopSb = L.circle([29.7838, -95.5886], {
     radius: 15
 }).addTo(mymap);
 stopSb.bindPopup("<center><b>Starbucks</b><br>Sponsored Pokestop<br></center>");
+	
+var stopSb2 = L.circle([29.7716, -95.6073], {
+    color: '#4863A0',
+    fillColor: '#4863A0',
+    fillOpacity: 0.5,
+    radius: 15
+}).addTo(mymap);
+stopSb2.bindPopup("<center><b>Starbucks</b><br>Sponsored Pokestop<br></center>");
 	
 var stopFish = L.circle([29.7834, -95.6019], {
     color: '#4863A0',
