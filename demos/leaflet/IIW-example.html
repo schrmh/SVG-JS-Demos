@@ -14,7 +14,7 @@
 <center><br><br><table><tr><td><div id="map" style="height: 580px; width: 60vw; border-radius: 13px 0px 0px 13px; float:left;"></div><div style="height: 500px; width: 400; border-radius: 13px; float:left;"><img src="graphic.svg"></div></td></tr></table></center>
 
 <script>
-var mymap = L.map('map').setView([29.7835, -95.5881], 16);
+var mymap = L.map('map').setView([29.7835, -95.5871], 16);
 
 var CartoDB_Positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
@@ -100,7 +100,7 @@ var stopf3 = L.circle([29.7855, -95.5925], {
 stopf3.bindPopup("<center><b>Fountain</b><br>Pokestop<br></center>");
  
 var popup = L.popup()
-    .setLatLng([29.785, -95.622])
+    .setLatLng([29.785, -95.662])
     .setContent("<h1>Click map areas<br>& icons for info</h1>")
     .openOn(mymap);
 	
