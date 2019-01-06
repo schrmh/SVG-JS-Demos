@@ -57,6 +57,18 @@ var park1 = L.polygon([
     fillOpacity: 0.5
 }).addTo(mymap);
 
+var park2 = L.polygon([
+    [29.7803, -95.6005],
+    [29.7808, -95.6005],
+    [29.7807, -95.6001],
+    [29.7812, -95.6000],
+    [29.7812, -95.5994],
+    [29.7803, -95.5994]
+], {color: 'green',
+    fillColor: 'green',
+    fillOpacity: 0.5
+}).addTo(mymap);
+	
 polygon.bindPopup("<center><b>School Grounds</b><br>No critters will spawn here.</center>");
 
  
