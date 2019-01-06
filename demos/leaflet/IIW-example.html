@@ -113,7 +113,6 @@ var schoolGrounds3 = L.polygon([
     [29.7752, -95.5996],
     [29.7757, -95.6011],
     [29.7758, -95.6015],
-    [29.7716, -95.5977],
     [29.7758, -95.6018],
     [29.7758, -95.6022]
 ], {color: 'grey',
@@ -121,6 +120,17 @@ var schoolGrounds3 = L.polygon([
     fillOpacity: 0.5
 }).addTo(mymap);
 schoolGrounds3.bindPopup("<center><b>School Grounds</b><br>No critters will spawn here.</center>");
+
+var schoolGrounds4 = L.polygon([
+    [29.7756, -95.6061],
+    [29.7756, -95.6024],
+    [29.7718, -95.6023],
+    [29.7717, -95.6062]
+], {color: 'grey',
+    fillColor: 'grey',
+    fillOpacity: 0.5
+}).addTo(mymap);
+schoolGrounds4.bindPopup("<center><b>School Grounds</b><br>No critters will spawn here.</center>");
 	
 var gymBuck = L.marker([29.7837, -95.5832]).addTo(mymap);
 gymBuck.bindPopup("<center><b>The Buck Statue</b><br>Gym<br></center>");
