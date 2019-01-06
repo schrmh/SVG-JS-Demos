@@ -60,10 +60,18 @@ var stopPop = L.circle([29.7838, -95.5823], {
     radius: 15
 }).addTo(mymap);
 stopPop.bindPopup("<center><b>Pop Culture Comics</b><br>Pokestop<br></center>");
+	
+var stopSb = L.circle([29.7838, -95.5823], {
+    color: '#4863A0',
+    fillColor: '#4863A0',
+    fillOpacity: 0.5,
+    radius: 15
+}).addTo(mymap);
+stopSb.bindPopup("<center><b>Starbucks</b><br>Pokestop<br></center>");
  
 var popup = L.popup()
     .setLatLng([29.785, -95.582])
-    .setContent("<h1>Click map areas and icons for info</h1>")
+    .setContent("<h1>Click map areas<br>& icons for info</h1>")
     .openOn(mymap);
 	
 </script>
