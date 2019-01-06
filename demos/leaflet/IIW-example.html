@@ -45,25 +45,25 @@ polygon.bindPopup("<center><b>School Grounds</b><br>No critters will spawn here.
 var gymBuck = L.marker([29.7837, -95.5832]).addTo(mymap);
 gymBuck.bindPopup("<center><b>The Buck Statue</b><br>Gym<br></center>");
  
-var stopPop = L.circle([29.7838, -95.5844], {
+var stopTc = L.circle([29.7838, -95.5844], {
     color: '#4863A0',
     fillColor: '#4863A0',
     fillOpacity: 0.5,
     radius: 15
 }).addTo(mymap);
-stopPop.bindPopup("<center><b>Taco Cabana</b><br>Pokestop<br></center>");
+stopTc.bindPopup("<center><b>Taco Cabana</b><br>Pokestop<br></center>");
  
-var stopTc = L.circle([29.7838, -95.5823], {
+var stopPop = L.circle([29.7838, -95.5823], {
     color: '#4863A0',
     fillColor: '#4863A0',
     fillOpacity: 0.5,
     radius: 15
 }).addTo(mymap);
-stopTc.bindPopup("<center><b>Pop Culture Comics</b><br>Pokestop<br></center>");
+stopPop.bindPopup("<center><b>Pop Culture Comics</b><br>Pokestop<br></center>");
  
 var popup = L.popup()
     .setLatLng([29.785, -95.582])
-    .setContent("Click map areas and icons for info")
+    .setContent("<h1>Click map areas and icons for info</h1>")
     .openOn(mymap);
 	
 </script>
