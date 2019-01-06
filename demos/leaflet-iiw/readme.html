@@ -1,0 +1,101 @@
+<head>
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
+
+ <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"
+   integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+   crossorigin=""></script>
+</head>
+<body>
+
+<div id="mapid" style="height: 580px; width: 75%; margin: 35px; border-radius: 13px;"></div>
+
+<script>
+var mymap = L.map('mapid').setView([40.110, -88.227], 16);
+
+L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="https://www.mapbox.com/">Mapbox</a>',
+    maxZoom: 18,
+    id: 'mapbox.streets',
+    accessToken: 'your.mapbox.access.token'
+}).addTo(mymap);
+
+var polygon = L.polygon([
+    [40.069, -88.249],
+    [40.069, -88.209],
+    [40.098, -88.209],
+    [40.098, -88.219],
+    [40.110, -88.219],
+    [40.110, -88.220],
+    [40.112, -88.220],
+    [40.112, -88.222],
+    [40.116, -88.222],
+    [40.116, -88.229],
+    [40.112, -88.229],
+    [40.112, -88.230],
+    [40.109, -88.230],
+    [40.106, -88.233],
+    [40.104, -88.233],
+    [40.104, -88.238],
+    [40.105, -88.238],
+    [40.105, -88.241],
+    [40.107, -88.242]
+]).addTo(mymap);
+ 
+var m_iu = L.marker([40.1093, -88.2275]).addTo(mymap);
+m_iu.bindPopup("<center><b>Illini Union</b><br>Student union in Urbana, Illinois<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href='https://union.illinois.edu/'>>> go >></a></center>");
+
+var m_kcpa = L.marker([40.1079, -88.2226]).addTo(mymap);
+m_kcpa.bindPopup("<center><b>Krannert Center for <br>the Performing Arts</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href='https://krannertcenter.com/'>>> go >></a></center>");
+ 
+var m_hab = L.marker([40.1085, -88.2281]).addTo(mymap);
+m_hab.bindPopup("<center><b>Harvey Administration Building</b></center>"); 
+ 
+var m_oh = L.marker([40.0991, -88.2214]).addTo(mymap);
+m_oh.bindPopup("<center><b>Oglesby Hall</b></center>");
+ 
+var m_fac = L.marker([40.1027, -88.2249]).addTo(mymap);
+m_fac.bindPopup("<center><b>Funk Agricultural, Consumer, &<br>Environmental Sciences Library</b></center>");
+
+var m_dh = L.marker([40.1069, -88.2261]).addTo(mymap);
+m_dh.bindPopup("<center><b>Davenport Hall</b></center>");
+
+var m_fa = L.marker([40.1060, -88.2273]).addTo(mymap);
+m_fa.bindPopup("<center><b>Foellinger Auditorium</b></center>");
+ 
+var m_atc = L.marker([40.0960, -88.2271]).addTo(mymap);
+m_atc.bindPopup("<center><b>Atkins Tennis Center</b></center>");
+ 
+var m_uirb = L.marker([40.0939, -88.2246]).addTo(mymap);
+m_uirb.bindPopup("<center><b>U of I Round Barns</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href='http://uihistories.library.illinois.edu/cgi-bin/cview?SITEID=1&ID=227'>>> go >></a></center>");
+ 
+var m_ml = L.marker([40.1045, -88.2290]).addTo(mymap);
+m_ml.bindPopup("<center><b>Main Library</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href='https://www.library.illinois.edu/'>>> go >></a></center>");
+ 
+var m_jh = L.marker([40.0928, -88.2177]).addTo(mymap);
+m_jh.bindPopup("<center><b>Japan House</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href='http://japanhouse.art.illinois.edu/en/'>>> go >></a></center>");
+
+var m_uia = L.marker([40.0935, -88.2165]).addTo(mymap);
+m_uia.bindPopup("<center><b>U of I Arboretum</b></center>");
+ 
+var m_dres = L.marker([40.1032, -88.2419]).addTo(mymap);
+m_dres.bindPopup("<center><b>Disabilities Resources<br>& Educational Services</b></center>");
+ 
+var m_kam = L.marker([40.1017, -88.2313]).addTo(mymap);
+m_kam.bindPopup("<center><b>Kranner Art Museum</b></center>");
+ 
+var m_scad = L.marker([40.1019, -88.2325]).addTo(mymap);
+m_scad.bindPopup("<center><b>School of Art + Design</b></center>");
+ 
+var m_uio = L.marker([40.1060, -88.2273]).addTo(mymap);
+m_uio.bindPopup("<center><b>U of I Observatory</b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href='https://astro.illinois.edu/newsroom/history-department/campus-observatory'>>> go >></a></center>");
+ 
+var popup = L.popup()
+    .setLatLng([40.112, -88.227])
+    .setContent("University of Illinois - Urbana Champaign")
+    .openOn(mymap);
+
+</script>
+
+</body>

@@ -1,0 +1,237 @@
+<head>
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+
+
+<title>POGO + Leaflet Mapping Example</title>
+</head>
+<body>
+
+<center><br><br><table><tr><td><div id="map" style="height: 580px; width: 60vw; border-radius: 13px 0px 0px 13px; float:left;"></div><div style="height: 500px; width: 400; border-radius: 13px; float:left;"><img src="graphic.svg"></div></td></tr></table></center>
+
+<script>
+var mymap = L.map('map').setView([29.7835, -95.5881], 16);
+
+var CartoDB_Positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+	subdomains: 'abcd',
+	maxZoom: 19
+}).addTo(mymap);
+
+var park1 = L.polygon([
+    [29.7804, -95.5978],
+    [29.7810, -95.5978],
+    [29.7809, -95.5977],
+    [29.7809, -95.5974],
+    [29.7810, -95.5970],
+    [29.7813, -95.5968],
+    [29.7816, -95.5967],
+    [29.7815, -95.5965],
+    [29.7803, -95.5965],
+    [29.7803, -95.5974],
+    [29.7804, -95.5977],
+    [29.7804, -95.5978]
+], {color: 'green',
+    fillColor: 'green',
+    fillOpacity: 0.5
+}).addTo(mymap);
+park1.bindPopup("<center><b>Neighborhood Park</b><br>Spawns with a Nesting Species</center>");
+
+var park2 = L.polygon([
+    [29.7803, -95.6005],
+    [29.7808, -95.6005],
+    [29.7807, -95.6001],
+    [29.7812, -95.6000],
+    [29.7812, -95.5994],
+    [29.7803, -95.5994]
+], {color: 'green',
+    fillColor: 'green',
+    fillOpacity: 0.5
+}).addTo(mymap);
+park2.bindPopup("<center><b>Neighborhood Park</b><br>Spawns with a Nesting Species</center>");
+
+var park3 = L.polygon([
+    [29.7752, -95.5994],
+    [29.7764, -95.5988],
+    [29.7768, -95.5987],
+    [29.7772, -95.5987],
+    [29.7772, -95.5972],
+    [29.7771, -95.5969],
+    [29.7763, -95.5956],
+    [29.7761, -95.5951],
+    [29.7761, -95.5947],
+    [29.7749, -95.5947],
+    [29.7749, -95.5985]
+], {color: 'green',
+    fillColor: 'green',
+    fillOpacity: 0.5
+}).addTo(mymap);
+park3.bindPopup("<center><b>Nottingham Park</b><br>Spawns with a Nesting Species</center>");	
+	
+var schoolGrounds1 = L.polygon([
+    [29.7789, -95.5853],
+    [29.7813, -95.5855],
+    [29.7813, -95.5852],
+    [29.7828, -95.5853],
+    [29.7828, -95.5815],
+    [29.7835, -95.5815],
+    [29.7835, -95.5801],
+    [29.7813, -95.5801],
+    [29.7813, -95.5817],
+    [29.7789, -95.5817]
+], {color: 'grey',
+    fillColor: 'grey',
+    fillOpacity: 0.5
+}).addTo(mymap);
+schoolGrounds1.bindPopup("<center><b>School Grounds</b><br>No critters will spawn here.</center>");
+
+var schoolGrounds2 = L.polygon([
+    [29.7748, -95.5983],
+    [29.7748, -95.5978],
+    [29.7749, -95.5978],
+    [29.7749, -95.5947],
+    [29.7701, -95.5946],
+    [29.7703, -95.5976],
+    [29.7716, -95.5977],
+    [29.7716, -95.5979],
+    [29.7742, -95.5979],
+    [29.7742, -95.5983]
+], {color: 'grey',
+    fillColor: 'grey',
+    fillOpacity: 0.5
+}).addTo(mymap);
+schoolGrounds2.bindPopup("<center><b>School Grounds</b><br>No critters will spawn here.</center>");
+	
+var schoolGrounds3 = L.polygon([
+    [29.7768, -95.6022],
+    [29.7769, -95.5989],
+    [29.7767, -95.5989],
+    [29.7752, -95.5996],
+    [29.7757, -95.6011],
+    [29.7758, -95.6015],
+    [29.7758, -95.6018],
+    [29.7758, -95.6022]
+], {color: 'grey',
+    fillColor: 'grey',
+    fillOpacity: 0.5
+}).addTo(mymap);
+schoolGrounds3.bindPopup("<center><b>School Grounds</b><br>No critters will spawn here.</center>");
+
+var schoolGrounds4 = L.polygon([
+    [29.7756, -95.6061],
+    [29.7756, -95.6024],
+    [29.7718, -95.6023],
+    [29.7717, -95.6062]
+], {color: 'grey',
+    fillColor: 'grey',
+    fillOpacity: 0.5
+}).addTo(mymap);
+schoolGrounds4.bindPopup("<center><b>School Grounds</b><br>No critters will spawn here.</center>");
+	
+var gymBuck = L.marker([29.7837, -95.5832]).addTo(mymap);
+gymBuck.bindPopup("<center><b>The Buck Statue</b><br>Gym<br></center>");
+ 
+var gymPega = L.marker([29.7857, -95.59085]).addTo(mymap);
+gymPega.bindPopup("<center><b>The Pegasus Statue</b><br>Gym<br></center>");
+
+var gymStad = L.marker([29.7783, -95.6054]).addTo(mymap);
+gymStad.bindPopup("<center><b>Tully Stadium</b><br>Gym<br></center>");
+	
+var gymBren = L.marker([29.7838, -95.5709]).addTo(mymap);
+gymBren.bindPopup("<center><b>Brenner's Steakhouse</b><br>Gym<br></center>");
+	
+var gymFert = L.marker([29.7837, -95.5701]).addTo(mymap);
+gymFert.bindPopup("<center><b>Fertility Clinic</b><br>Gym<br></center>");
+	
+var gymObie = L.marker([29.7840, -95.5932]).addTo(mymap);
+gymObie.bindPopup("<center><b>The Obelisk</b><br>Gym<br></center>");
+
+var gymPark = L.marker([29.7772, -95.5984]).addTo(mymap);
+gymPark.bindPopup("<center><b>Nottingham Park</b><br>Gym<br></center>");
+
+var gymVote = L.marker([29.7763, -95.5985]).addTo(mymap);
+gymVote.bindPopup("<center><b>Voting Center</b><br>Gym<br></center>");
+	
+var stopTc = L.circleMarker([29.7838, -95.5844], {
+    color: '#4863A0',
+    fillColor: '#4863A0',
+    fillOpacity: 0.5
+}).addTo(mymap);
+stopTc.bindPopup("<center><b>Taco Cabana</b><br>Pokestop<br>Official Regional PVP Location</center>");
+ 
+var stopPop = L.circle([29.7838, -95.5823], {
+    color: '#4863A0',
+    fillColor: '#4863A0',
+    fillOpacity: 0.5,
+    radius: 15
+}).addTo(mymap);
+stopPop.bindPopup("<center><b>Pop Culture Comics</b><br>Pokestop<br></center>");
+	
+var stopSb = L.circle([29.7838, -95.5886], {
+    color: '#4863A0',
+    fillColor: '#4863A0',
+    fillOpacity: 0.5,
+    radius: 15
+}).addTo(mymap);
+stopSb.bindPopup("<center><b>Starbucks</b><br>Sponsored Pokestop<br></center>");
+	
+var stopSb2 = L.circle([29.7716, -95.6073], {
+    color: '#4863A0',
+    fillColor: '#4863A0',
+    fillOpacity: 0.5,
+    radius: 15
+}).addTo(mymap);
+stopSb2.bindPopup("<center><b>Starbucks</b><br>Sponsored Pokestop<br></center>");
+	
+var stopFish = L.circle([29.7834, -95.6019], {
+    color: '#4863A0',
+    fillColor: '#4863A0',
+    fillOpacity: 0.5,
+    radius: 15
+}).addTo(mymap);
+stopFish.bindPopup("<center><b>Fish Fountain</b><br>Pokestop<br></center>");
+	
+var stopCou = L.circle([29.7840, -95.5963], {
+    color: '#4863A0',
+    fillColor: '#4863A0',
+    fillOpacity: 0.5,
+    radius: 15
+}).addTo(mymap);
+stopCou.bindPopup("<center><b>Cou Yon Seafood House</b><br>Pokestop<br></center>");
+	
+var stopf1 = L.circle([29.7855, -95.5914], {
+    color: '#4863A0',
+    fillColor: '#4863A0',
+    fillOpacity: 0.5,
+    radius: 15
+}).addTo(mymap);
+stopf1.bindPopup("<center><b>Fountain</b><br>Pokestop<br></center>");
+	
+var stopf2 = L.circle([29.7855, -95.5919], {
+    color: '#4863A0',
+    fillColor: '#4863A0',
+    fillOpacity: 0.5,
+    radius: 15
+}).addTo(mymap);
+stopf2.bindPopup("<center><b>Fountain</b><br>Pokestop<br></center>");
+	
+var stopf3 = L.circle([29.7855, -95.5925], {
+    color: '#4863A0',
+    fillColor: '#4863A0',
+    fillOpacity: 0.5,
+    radius: 15
+}).addTo(mymap);
+stopf3.bindPopup("<center><b>Fountain</b><br>Pokestop<br></center>");
+ 
+var popup = L.popup()
+    .setLatLng([29.785, -95.588])
+    .setContent("<h1>Click map areas<br>& icons for info</h1>")
+    .openOn(mymap);
+	
+</script>
+
+</body>
