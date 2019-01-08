@@ -21,9 +21,6 @@ var CartoDB_Positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/
 	subdomains: 'abcd',
 	maxZoom: 19
 }).addTo(mymap);
-
-var gymVote = L.marker([29.7763, -95.5985]).addTo(mymap);
-gymVote.bindPopup("<center><b>Voting Center</b><br>Gym<br></center>");
 	
 var stopTc = L.circleMarker([29.7838, -95.5709], {
     color: '#4863A0',
@@ -32,33 +29,70 @@ var stopTc = L.circleMarker([29.7838, -95.5709], {
 }).addTo(mymap);
 stopTc.bindPopup("<center><b>Brenner's Steakhouse</b><br>Meet at 12:15 for carpooling. <br>Head to Don Coleman by 12:40.<br></center>");
 
-var LeafIcon = L.Icon.extend({
+var PokeIcon = L.Icon.extend({
     options: {
         shadowUrl: 'pokestop-shadow.png',
         iconSize:     [40, 40],
         shadowSize:   [45, 50],
-        iconAnchor:   [22, 94],
-        shadowAnchor: [19, 103],
-        popupAnchor:  [-3, -76]
+        iconAnchor:   [22, 45],
+        shadowAnchor: [19, 54],
+        popupAnchor:  [-2, -40]
     }
 });
 
-var greenIcon = new LeafIcon({iconUrl: 'pokestop.png'}),
-    redIcon = new LeafIcon({iconUrl: 'leaf-red.png'}),
-    orangeIcon = new LeafIcon({iconUrl: 'leaf-orange.png'});
+var stopIcon = new PokeIcon({iconUrl: 'pokestop.png'}),
+    fightIcon = new PokeIcon({iconUrl: 'battle.png'}),
+    startIcon = new PokeIcon({iconUrl: 'mystic1.png'});
 	
 	L.icon = function (options) {
     return new L.Icon(options);
 };
 
-L.marker([29.7858, -95.5709], {icon: greenIcon}).addTo(mymap).bindPopup("I am a green leaf.");
-L.marker([29.7838, -95.5709], {icon: redIcon}).addTo(mymap).bindPopup("I am a red leaf.");
-L.marker([29.7818, -95.5709], {icon: orangeIcon}).addTo(mymap).bindPopup("I am an orange leaf.");
+L.marker([29.7837, -95.5712], {icon: startIcon}).addTo(mymap).bindPopup("<center><b>Brenner's Steakhouse</b><br>Meet at 12:15 for carpooling. <br>Head to Don Coleman by 12:40.<br></center>");
+L.marker([29.7763, -95.6048], {icon: fightIcon}).addTo(mymap).bindPopup("<center><b>1:02 - Don Coleman Coliseum</b><br>1050 Dairy Ashford, Houston, Tx 77077<br></center>");
+L.marker([29.7763, -95.5984], {icon: fightIcon}).addTo(mymap).bindPopup("<center><b>1:10 - Nottingham Park Voting Facility</b><br>926 Country Pl Dr, Houston, Tx 77079<br></center>");
+L.marker([29.7770, -95.5984], {icon: fightIcon}).addTo(mymap).bindPopup("<center><b>1:16 - Nottingham Park Walking Trail</b><br>926 Country Pl Dr, Houston, Tx 77079<br></center>");
+L.marker([29.7709, -95.5997], {icon: fightIcon}).addTo(mymap).bindPopup("<center><b>1:24 - Golden Lion @ Chef Ding</b><br>14348 Memorial Dr, Houston, Tx 77079<br></center>");
+L.marker([29.7565, -95.6054], {icon: fightIcon}).addTo(mymap).bindPopup("<center><b>1:35 - Grace Point Church</b><br>1315 S Dairy Ashford Rd, Houston, Tx 77077<br></center>");
  
  var latlngsB = [
     [29.7838, -95.5709],
     [29.7841, -95.5709],
-    [29.7840, -95.5639]
+    [29.7840, -95.5639],
+    [29.7842, -95.5637],
+    [29.7850, -95.5637],
+    [29.7851, -95.5639],
+    [29.7853, -95.6066],
+    [29.7771, -95.6063],
+    [29.7771, -95.6050],
+    [29.7759, -95.6049],
+    [29.7759, -95.6053],
+    [29.7757, -95.6053],
+    [29.7757, -95.6015],
+    [29.7751, -95.5994],
+    [29.7765, -95.5988],
+    [29.77645, -95.5987],
+    [29.7770, -95.5985],
+    [29.7771, -95.59865],
+	[29.7773, -95.5987],
+	[29.7773, -95.5988],
+    [29.7766, -95.5989],
+    [29.77335, -95.6003],
+    [29.7727, -95.6005],
+    [29.7708, -95.6005],
+    [29.7708, -95.6002],
+    [29.7710, -95.6002],
+    [29.7710, -95.5997],
+    [29.7702, -95.5997],
+    [29.7701, -95.6064],
+    [29.7630, -95.6063],
+    [29.7611, -95.6064],
+    [29.7570, -95.6063],
+    [29.7569, -95.6059], //GracePoint Church
+    [29.7567, -95.6059],
+    [29.7567, -95.6057],
+    [29.7565, -95.6057],
+    [29.7565, -95.6052]
 ];
 var polyline = L.polyline(latlngsB, {color: 'blue', opacity: 0.5}).addTo(mymap);
  
