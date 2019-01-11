@@ -1,0 +1,100 @@
+<head>
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
+
+
+<title>POGO + Leaflet Mapping Example</title>
+</head>
+<body>
+
+<center><br><br><table><tr><td><div id="map" style="height: 580px; width: 60vw; border-radius: 13px 0px 0px 13px; float:left;"></div><div style="height: 500px; width: 400; border-radius: 13px; float:left;"><img src="graphic.svg"></div></td></tr></table></center>
+
+<script>
+var mymap = L.map('map').setView([29.890622, -95.380709], 9);
+
+var CartoDB_Positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+	subdomains: 'abcd',
+	maxZoom: 19
+}).addTo(mymap);
+
+
+	var PokeIcon = L.Icon.extend({
+    options: {
+        shadowUrl: 'pokestop-shadow.png',
+        iconSize:     [40, 40],
+        shadowSize:   [45, 50],
+        iconAnchor:   [22, 45],
+        shadowAnchor: [19, 54],
+        popupAnchor:  [-2, -40]
+    }
+});
+
+var stopIcon = new PokeIcon({iconUrl: 'pokestop.png'}),
+    gymIcon = new PokeIcon({iconUrl: 'pointer.png'}),
+    specialIcon = new PokeIcon({iconUrl: 'star-1.png'});
+	
+	L.icon = function (options) {
+    return new L.Icon(options);
+};
+
+L.marker([29.721501, -95.388062], {icon: gymIcon}).addTo(mymap).bindPopup("<center><b>McGovern Centennial Gardens</b><br>Check in w/ TBA<br></center>");
+
+L.marker([29.755805, -95.457082], {icon: gymIcon}).addTo(mymap).bindPopup("<center><b>Uptown Park</b><br>Check in w/@NTejana (12:00-1:00),<br>@IamMadi,@Mersa<br></center>");
+
+L.marker([29.753112, -95.359648], {icon: gymIcon}).addTo(mymap).bindPopup("<center><b>Discovery Green</b><br>Check in w/ TBA<br></center>");
+
+L.marker([29.802138, -95.397392], {icon: gymIcon}).addTo(mymap).bindPopup("<center><b>Marmion Park</b><br>Check in w/ TBA<br></center>");
+
+L.marker([29.719958, -95.342230], {icon: gymIcon}).addTo(mymap).bindPopup("<center><b>University of Houston</b><br>Check in w/@AXX<br></center>");
+
+L.marker([29.685778, -95.463639], {icon: gymIcon}).addTo(mymap).bindPopup("<center><b>Firehouse mural</b><br>Check in w/@Alex and <br>Lord Jawann(11:00am-12:00pm) <br></center>");
+
+L.marker([29.550911, -95.296279], {icon: gymIcon}).addTo(mymap).bindPopup("<center><b>Centennial Park</b><br>Check in w/@kabobrocks<br></center>");
+
+L.marker([29.780956, -95.539886], {icon: gymIcon}).addTo(mymap).bindPopup("<center><b>Memorial City Mall</b><br>Check in w/ TBA<br></center>");
+
+L.marker([29.781775, -95.623717], {icon: gymIcon}).addTo(mymap).bindPopup("<center><b>Terry Hershy Park</b><br>Check in w/ TBA<br></center>");
+
+L.marker([29.872515, -95.541729], {icon: gymIcon}).addTo(mymap).bindPopup("<center><b>Bane Park</b><br>Check in w/@CarlEricTQ(2:00-4:00   pm)<br></center>");
+
+L.marker([29.910626, -95.691677], {icon: gymIcon}).addTo(mymap).bindPopup("<center><b>Lone Star College Cy-Fair</b><br>Check in w/@Marvel281<br></center>");
+
+L.marker([29.994197, -95.572355], {icon: gymIcon}).addTo(mymap).bindPopup("<center><b>Vintage Park</b><br>Check in w/@Sank2ary, @KagomeH<br></center>");
+
+L.marker([30.011254, -95.509519], {icon: gymIcon}).addTo(mymap).bindPopup("<center><b>Meyer&Collins Park</b><br>Check in w/@Number1Noel<br></center>");
+
+L.marker([30.078914, -95.421059], {icon: gymIcon}).addTo(mymap).bindPopup("<center><b>Old Town Spring</b><br>Check in w/@Turran3582<br></center>");
+
+L.marker([30.038227, -95.380785], {icon: gymIcon}).addTo(mymap).bindPopup("<center><b>Mercer Botanic Gardens</b><br>Check in w/@Zaapiel7<br></center>");
+
+L.marker([30.163897, -95.463276], {icon: gymIcon}).addTo(mymap).bindPopup("<center><b>Market Street</b><br>Check in w/mdiemert4<br></center>");
+
+L.marker([30.129336, -95.576705], {icon: gymIcon}).addTo(mymap).bindPopup("<center><b>Burroughs Park</b><br>Check in w/@Rhyz<br></center>");
+
+L.marker([30.320860, -95.471884], {icon: gymIcon}).addTo(mymap).bindPopup("<center><b>Candy Cane Park</b><br>Check in w/LinsanityStrong<br></center>");
+
+L.marker([29.636136, -95.183314], {icon: gymIcon}).addTo(mymap).bindPopup("<center><b>Burke Crenshaw Park</b><br>Check in w/@Lizzy(Adrienchat),<br>@Janet(foxieh)@Jazmean77<br></center>");
+
+L.marker([29.521019, -95.192323], {icon: gymIcon}).addTo(mymap).bindPopup("<center><b>Stevenson Park</b><br>Check in w/@MsPits88(12:30-4:30 pm)<br>@mrsexyerik(12:30-4:30 pm)<br></center>");
+
+L.marker([29.997405, -95.263609], {icon: gymIcon}).addTo(mymap).bindPopup("<center><b>Uptown Park[Humble]</b><br>Check in w/@Irhwho<br></center>");
+
+L.marker([30.047589, -95.185154], {icon: gymIcon}).addTo(mymap).bindPopup("<center><b>Town Center Park</b><br>Check in w/ TBA<br></center>");
+
+L.marker([29.583167, -95.762306], {icon: gymIcon}).addTo(mymap).bindPopup("<center><b>Richmond Water Tower</b><br>Check in w/@mommankeys,<br>@amberlambster,@Redogg88<br></center>");
+
+
+	
+var popup = L.popup()
+    .setLatLng([29.753112, -95.359648])
+    .setContent("<h1>Click map areas<br>& icons for info</h1>")
+    .openOn(mymap);
+	
+</script>
+
+</body>
