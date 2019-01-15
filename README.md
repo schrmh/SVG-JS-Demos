@@ -17,6 +17,9 @@ Updated: January 15th
 - [Space Cat!:](https://webcraftie.github.io/SVG-JS-Demos/demos/space-cat.html) Behold Space Cat's Power! original graphics not by me.
 - [LeafletJS Map:](https://webcraftie.github.io/SVG-JS-Demos/demos/leaflet/readme.html) Inaccurate outline of the UIUC campus and grounds
 - [LeafletJS for IIW:](https://webcraftie.github.io/SVG-JS-Demos/demos/leaflet-iiw/IIW-example-v2.html) Example of using Leaflet for local mapping of POGO resources
-- [LeafletJS for IIW #2:](https://webcraftie.github.io/SVG-JS-Demos/demos/leaflet-iiw/IIW-example2.html) Example of using Leaflet for local mapping of POGO resources
+- [LeafletJS for IIW #2:](https://webcraftie.github.io/SVG-JS-Demos/demos/leaflet-iiw/IIW-example2.html) A Second Example related to POGO
+
 
 ### Student Examples:
+
+- [Student Leaflet from IIW:](https://webcraftie.github.io/SVG-JS-Demos/demos/leaflet-student-example/Nathans-Map.html) Student created map from IIW
