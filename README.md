@@ -1,6 +1,8 @@
 ## SVG & Javascript
 
-Examples and expanded demos from instructional videos provided on my YouTube channel.
+Examples and expanded demos from instructional videos provided on my YouTube channel. Programming here is specifically Javascript, tied with libraries or SVGs. I also play a fair amount with Python, but don't currently have any of that shown here.
+
+Updated: January 15th
 
 ### Demos:
 
@@ -14,3 +16,7 @@ Examples and expanded demos from instructional videos provided on my YouTube cha
 - [CS Timeline:](https://webcraftie.github.io/SVG-JS-Demos/demos/timeline.html) Timeline with arrows that you can mouse over. Embedded PNG not by me.
 - [Space Cat!:](https://webcraftie.github.io/SVG-JS-Demos/demos/space-cat.html) Behold Space Cat's Power! original graphics not by me.
 - [LeafletJS Map:](https://webcraftie.github.io/SVG-JS-Demos/demos/leaflet/readme.html) Inaccurate outline of the UIUC campus and grounds
+- [LeafletJS for IIW:](https://webcraftie.github.io/SVG-JS-Demos/demos/leaflet-iiw/IIW-example-v2.html) Example of using Leaflet for local mapping of POGO resources
+- [LeafletJS for IIW #2:](https://webcraftie.github.io/SVG-JS-Demos/demos/leaflet-iiw/IIW-example2.html) Example of using Leaflet for local mapping of POGO resources
+
+### Student Examples:
