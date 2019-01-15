@@ -18,7 +18,7 @@ Updated: January 15th
 - [LeafletJS Map:](https://webcraftie.github.io/SVG-JS-Demos/demos/leaflet/readme.html) Inaccurate outline of the UIUC campus and grounds
 - [LeafletJS for IIW:](https://webcraftie.github.io/SVG-JS-Demos/demos/leaflet-iiw/IIW-example-v2.html) Example of using Leaflet for local mapping of POGO resources
 - [LeafletJS for IIW #2:](https://webcraftie.github.io/SVG-JS-Demos/demos/leaflet-iiw/IIW-example2.html) A Second Example related to POGO
-- [Updated JavaScript Quiz Module:](http://online-courses.directory/quizzes/pogo-exam/pogo-quiz01.html) I've made some major updates to my Quiz Module that I've been using for a few years. I still have a few major updates planned for it that I haven't programmed in yet. This content is currently the POGO content from IIW. Give it a shot. Even if you dont know the answers, answer through and check out the results page.
+- [Updated JavaScript Quiz Module:](http://online-courses.directory/quizzes/pogo-exam/pogo-quiz01.html) Links to external location - I've made some major updates to my Quiz Module that I've been using for a few years. I still have a few major updates planned for it that I haven't programmed in yet. This content is currently the POGO content from IIW. Give it a shot. Even if you dont know the answers, answer through and check out the results page.
 
 ### Student Examples:
 
